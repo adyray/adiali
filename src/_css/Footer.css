@@ -1,0 +1,34 @@
+.footerContainer{
+  background: #170f45;
+  padding:40px;
+}
+
+.footerContent ul{
+  list-style: none;
+  padding:0;
+}
+
+.footerContent{
+  width:50%;
+  padding:10px;
+  color:white;
+  height:100%;
+}
+
+.footerContent li {
+padding:10px;
+text-align: left;
+}
+
+.socialLogos{
+  display:flex;
+  justify-content: left;
+  align-items: center;
+  padding:0;
+  margin-left:-8px;
+}
+
+.left-f-title{
+  text-align:left;
+  font-size:30px;
+}

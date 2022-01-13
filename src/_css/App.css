@@ -1,0 +1,160 @@
+/* project colours
+
+
+primary
+hot pink #e90349
+cyan #00ffff
+ocean blue #2c03fc
+dark blue #170f45
+black #000
+white #fff
+
+secondary
+dark purple #450d3d
+crayon purple #a73559
+
+tertiary
+mint green #0cfdab
+leaf green #14c37b */
+
+
+.App {
+  text-align: center;
+}
+.title{
+  font-size:18pt;
+  text-align: left;
+  padding-bottom:10px;
+  padding-left:40px;
+  border-bottom:1pt solid #01635e;
+  width:fit-content;
+}
+
+.clientsTabs{
+  list-style: none;
+  display:flex;
+  /* background:#f3f3f3; */
+  padding:20px 100px;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+.clientsTabs li{
+  width:200px;
+  height:200px;
+  min-width:200px;
+  /* padding:20px; */
+  margin: 20px auto;
+  padding:20px;
+  
+  border:1px solid #f1f1f1;
+  /* padding:20px; */
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:#f1f1f1;
+}
+button{
+  background:transparent;
+  color:white;
+  font-size:12pt;
+  padding:8px 20px 8px 20px;
+  height:fit-content;
+  border:1px solid white;
+  border-radius: 20px;
+  animation:1s revanim forwards
+}
+button:hover{
+  animation:1s anim forwards;
+}
+
+h1.flashyTitles{
+  /* background-color: Black; 
+  color:white;
+  width: fit-content; 
+  padding: 10px;
+  margin:0; */
+  background-color: rgb(233, 3, 73); 
+  width: fit-content; color: white; padding: 10px;
+}
+
+@keyframes anim {
+  from{
+    border:1px solid white;
+    color:white
+  }
+  to{
+    border:1px solid #e90349;
+    color:#e90349
+  }
+}
+
+@keyframes revanim {
+  from{
+    border:1px solid #e90349;
+    color:#e90349
+  }
+  to{
+    border:1px solid white;
+    color:white
+  }
+}
+
+/* @media only screen and (max-width: 600px){
+  .clientTabs-wrapper
+  {
+    height:500px;
+    overflow:hidden;
+    overflow-y:scroll;
+    /* width:100%; */
+    
+  /* } */
+  /* .clientsTabs{
+    display:block !important;
+    /* width:100%; */
+    /* background:red; */
+  /* } */
+  /* .clientsTabs li{
+    width:200px;
+    height:200px;
+  } */ 
+
+/* } */ 
+
+@media only screen and (max-width: 1000px){
+  .clientTabs-wrapper
+  {
+    /* height:500px; */
+    display:flex;
+    /* overflow:hidden; */
+    overflow-y:scroll;
+    width:fit-content;
+    /* display:inline-block !important; */
+  }
+  .clientsTabs{
+    display:inline-flex !important;
+    background:yellowgreen;
+    /* width:80%; */
+    /* width:fit-content; */
+    padding:0 !important;
+    margin:0px 0px !important;
+    /* background:red; */
+  }
+
+  .clientsTabs li{
+    /* margin:auto; */
+    /* padding:0 !important; */
+    margin:0 !important;
+    width:200px;
+    height:200px;
+  }
+
+
+
+  .clientTabs-fullwrapper{
+    overflow-x:scroll;
+    overflow-y:hidden;
+  }
+
+}

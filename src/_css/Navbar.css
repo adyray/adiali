@@ -1,0 +1,260 @@
+.nb {
+  position:fixed;
+  width:100vw;
+  height:50px;
+  background:#170f45;
+  display:flex;
+  z-index:9999;
+  color:white;
+  border-bottom:2px solid #82348C;
+
+}
+
+.nb_li{
+  width:100%;
+  height:100%;
+  list-style:none;
+  display:flex;
+  flex-direction:row-reverse;
+  border-bottom:red;
+  color:white;
+}
+
+.nb_li li{
+  margin-right:20px;
+}
+.nb_li li:hover {
+  color:#e90349;
+  cursor:pointer
+}
+
+.logo-main{
+  background:#170f45;
+  /* border-right:2px solid #e90349; */
+  border-bottom:2px solid #e90349;
+  padding:20px;
+  /* margin:0px 0px; */
+  width:fit-content;
+  height:fit-content;
+  /* border-bottom-right-radius: 30px; */
+}
+
+.logoText{
+margin-top:-8px;
+}
+
+a{
+  text-decoration: none;
+  color:white
+}
+a:hover{
+  color:#e90349
+}
+
+
+
+@keyframes colorChangeReverse {
+  from{
+    background:#82348C;
+  }
+  to{
+    background: #e90349;
+    color:black
+  }
+}
+
+
+@keyframes colorChange {
+  from{
+    background:#e90349;
+  }
+  to{
+    background: #82348C;
+    color:white
+  }
+}
+
+
+.openMenu{
+  display:none;
+  background:#170f45;
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:9990;
+  padding-top: 160px;
+}
+
+.openMenu ul{
+padding:0;
+list-style:none;
+width:100%;
+color:white;
+display:flex;
+flex-direction: column-reverse;
+justify-content: center;
+align-items: center;
+margin:0 auto;
+}
+
+.openMenu li{
+padding-top:30px;
+width:fit-content;
+text-align: center;
+height:60px;
+font-size:20px;
+}
+
+
+.getInTouch_container{
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  z-index:9999;
+  display:none;
+  justify-content:center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+h2.formTitle{
+  background:#e90349 !important;
+  text-align: center;
+  margin:20px auto;
+  width:fit-content;
+  color:white;
+  padding:4px 7px;
+}
+.cta_contact:hover{
+color:#e90349 !important;
+cursor: pointer;
+}
+.getInTouch{
+  background:#170f45;
+  color:white;
+  width:300px;
+  height:fit-content;
+  /* border:1.2px solid #e90349; */
+  padding:10px;
+  border-left:10px solid #e90349;
+  border-bottom:2px solid #e90349;
+  border-top:1px solid #e90349;
+  border-right:1px solid #e90349;
+}
+.contact_form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact_form label{
+  /* background:red; */
+  font-size:10px;
+
+  /* width:100%; */
+}
+.getInTouch span:hover{
+text-decoration: underline;
+  cursor:pointer;
+}
+.getInTouch span
+{
+  display:flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  align-self: flex-end;
+  padding:10px;
+  font-size:10pt;
+  border-bottom:1px solid #e90349;
+  /* background:#ccc; */
+}
+
+.enquiry-dropdown{
+  list-style: none;
+  height:30px;
+  /* overflow-y:scroll; */
+  width:70%;
+  padding:0;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+[name="enquiryType"]{
+  display:none !important
+}
+
+.enquiry-dropdown li{
+  background:#ccc;
+  color:black;
+  margin-bottom:2px;
+  width:50%;
+  margin:2px;
+  height:fit-content
+}
+
+.active-enquiry{
+  background:#e90349 !important;
+  color:white !important
+}
+
+.enquiry-dropdown li:hover{
+  background:white;
+  color:black
+}
+
+input, textarea{
+  background: transparent;
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  border-bottom:1.2px solid #ccc;
+  color:white;
+  width:200px;
+  font-size:15px;
+  font-weight: bolder;
+  padding:10px;
+  margin-bottom:20px;
+  outline:0;
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+  font:"Roboto" !important;
+}
+
+@media only screen and (max-width: 630px) {
+  .openMenu{
+    display:none;
+  }
+  .nb_li {
+    display:none;
+  }
+  .menu{
+    width:100%;
+    padding:0ox;
+    position:absolute;
+    left:calc(100% - 55px);
+    background:#170f45;
+   
+  }
+  .logo{
+    width:40px !important;
+  
+  }
+
+  input::placeholder, textarea::placeholder {
+    font:"Roboto" !important;
+  }
+
+
+  .menu div{
+  width: 35px;
+  height: 1px;
+  background-color: white;
+  margin: 6px;
+  margin-top:12px;
+  }
+
+
+}
