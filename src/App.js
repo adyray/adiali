@@ -5,6 +5,7 @@ import main from "./main"
 import about from "./about"
 import work from "./projects"
 import elemental from "./_content/projects/elemental"
+import instax from "./instax"
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
           <Route path="/" exact component={main}></Route>
           <Route path="/about" component={about}></Route>
           <Route path="/work" component={work}></Route>
-          <Route path="*" component={elemental} />
+          <Route path="/instax" component={instax}></Route>
+          <Route path="*" component={elemental} ></Route>
         </Switch>
       </Router>
 

@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+.wrapper{
+  position: absolute;
+  width:100vw;
+  height:100vh;
+  background-color: #5ba4ad;
+  color:black;
+  overflow:hidden;
+  user-select: none;
+  z-index:-2
+}
+.Finder{
+  background:black;
+  width:fit-content;
+  padding:5px 10px 5px 10px;
+  margin:50px auto;
+  color:white;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.Finder:hover{
+  /* background-color:slategray; */
+  color:white;
+  cursor:pointer
+}
+
+.DataBox{
+  /* border:2px solid darkcyan; */
+  padding:20px;
+}
+
+.DataBox p {
+  font-size:20pt;
+  font-weight: bolder;
+  color:white;
+}
+.data{
+  list-style: none;
+  padding:0px;
+  width:100%;
+  margin:0;
+  overflow-x:scroll;
+  display:flex;
+}
+
+.p1{
+  position:absolute;
+  margin-left:70px;
+  margin-top:-70px
+}
+.Disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.data li {
+  margin:10px;
+  /* margin-top:-400px; */
+  animation: 1s comeDown forwards;
+  transition: width 2s;
+  will-change: width;
+  
+}
+
+.slideDown{
+  animation: 1s comeDown forwards;
+}
+
+.data li img{
+  border: 5px;
+  border-bottom:40px;
+  border-style: solid;
+  border-color:whitesmoke;
+}
+
+@keyframes comeDown {
+  0%{
+    margin-top:-400px
+  }
+  100%{
+    margin-top:0px;
+  }
+}
+
+.bg{
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  z-index:-1;
+  width:40%;
+}
+.footer{
+  position:absolute;
+  bottom:20px;
+  text-align: center;
+  width:100%;
+  margin:0;
+  color:white;
+  font-size:10pt;
+}

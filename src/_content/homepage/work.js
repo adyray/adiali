@@ -11,7 +11,7 @@ function work() {
   return (
     <>
     {/* <p className="title">Clients</p> */}
-    {/* <h1 className="flashyTitles"> </h1> */}
+    {/* <h1 className="flashyTitles"> test </h1> */}
     <div className="clientTabs-fullwrapper">
     <div className="clientTabs-wrapper">
     <ul className="clientsTabs">

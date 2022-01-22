@@ -166,7 +166,8 @@ function Work() {
                 Oracle
               </li>
             <p className="scrolltoslide"><span>&darr;</span><br />scroll to view</p>
-
+            
+              <a href="/instax"><li className="selector" style={{marginTop: "100px"}}> Instax Demo </li></a>
 
             </ul>
 
