@@ -178,7 +178,7 @@ const [proj, setProj] = useState(false)
               </li>
             <p className="scrolltoslide"><span>&darr;</span><br />scroll to view</p>
             
-              <a href="/instax"><li className="selector" style={{marginTop: "100px"}}> Instax Demo </li></a>
+              {/* <a href="/instax"><li className="selector" style={{marginTop: "100px"}}> Instax Demo </li></a> */}
 
             </ul>
 
@@ -192,7 +192,7 @@ const [proj, setProj] = useState(false)
             <ul className="preview">
 
             
-            <p style={{border:0, color:"white", background:"#e90349", margin:"0 auto"}}>
+            <p style={{border:0, fontSize:"10vw", color:"white", background:"#e90349", margin:"0 auto"}}>
             View / Download Portfolio PDF
             </p>
            
