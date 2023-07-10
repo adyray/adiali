@@ -192,7 +192,7 @@ const [proj, setProj] = useState(false)
             <ul className="preview">
 
             
-            <p style={{border:0, fontSize:"10vw", color:"white", background:"#e90349", margin:"0 auto"}}>
+            <p style={{border:0, fontSize:"2vw", color:"white", background:"#e90349", margin:"0 auto"}}>
             View / Download Portfolio PDF
             </p>
            
