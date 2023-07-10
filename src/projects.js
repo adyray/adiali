@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+// import { Link } from "react-router-dom"
+import pdf from "./one.pdf"
 import Navbar from './_content/main/navbar'
 import Footer from './_content/main/footer'
 import ProjectTemplate from './_content/projects/projectTemplate'
@@ -12,8 +14,10 @@ import ind3 from './_img/contents/indeed/3.jpg'
 import ind4 from './_img/contents/indeed/4.png'
 import ind5 from './_img/contents/indeed/5.png'
 import ind6 from './_img/contents/indeed/6.png'
+import indvid from './_img/contents/indeed/indeed_rise.mp4'
 
-
+import fbvid1 from './_img/contents/fitbit/fitbit_1.mp4'
+import fbvid2 from './_img/contents/fitbit/fitbit_2.mp4'
 import fitbit1 from './_img/contents/fitbit/1.jpg'
 import fitbit2 from './_img/contents/fitbit/2.jpg'
 import fitbit3 from './_img/contents/fitbit/3.jpg'
@@ -28,6 +32,12 @@ import or4 from './_img/contents/oracle/4.png'
 import or5 from './_img/contents/oracle/5.png'
 import or6 from './_img/contents/oracle/6.png'
 
+import o1 from './_img/contents/oracle/O_1.mp4'
+import o2 from './_img/contents/oracle/O_2.mp4'
+import o3 from './_img/contents/oracle/O_3.mp4'
+import o4 from './_img/contents/oracle/O_4.mp4'
+import o5 from './_img/contents/oracle/O_5.mp4'
+
 import ihg1 from './_img/contents/IHG/1.png'
 import ihg2 from './_img/contents/IHG/2.png'
 import ihg3 from './_img/contents/IHG/3.png'
@@ -41,6 +51,8 @@ import fb3 from './_img/contents/fb/3.png'
 import fb4 from './_img/contents/fb/4.jpg'
 import fb5 from './_img/contents/fb/5.png'
 import fb6 from './_img/contents/fb/6.png'
+import fb7 from './_img/contents/fb/whatsapp_ad.mp4'
+import fb8 from './_img/contents/fb/farmer.mp4'
 
 import ea1 from './_img/contents/ea/1.jpg'
 import ea2 from './_img/contents/ea/2.jpg'
@@ -48,8 +60,6 @@ import ea3 from './_img/contents/ea/3.jpg'
 import ea4 from './_img/contents/ea/4.jpg'
 import ea5 from './_img/contents/ea/5.jpg'
 import ea6 from './_img/contents/ea/6.png'
-
-
 
 import vidIhg1 from './_img/contents/IHG/1.mp4'
 
@@ -77,9 +87,11 @@ import React from 'react'
 
 import gsap from 'gsap/all'
 
+
 function Work() {
 
-  const [proj, setProj] = useState(false)
+const [proj, setProj] = useState(false)
+
   const activateThis = (e, n) => {
     const panel = document.getElementsByClassName("flashyTitles")[n].offsetTop
     gsap.to(window, 2, { scrollTo: { y: panel + 40 } })
@@ -135,7 +147,7 @@ function Work() {
     }
 
   }
-
+// const path = "./re.pdf";
   return (
     <>
       <Navbar /><br />
@@ -143,7 +155,6 @@ function Work() {
         <div onClick={() => openMenu(proj)} className="project_sidebar">
           <div className="jam">
             <div className="menuText">PROJECT MENU</div>
-            {/* <p>PROJECTS</p> */}
             <ul>
               <li className="selector active" onClick={(e) => activateThis(e, 0)}>
                 Fitbit
@@ -180,9 +191,17 @@ function Work() {
 
             <ul className="preview">
 
+            
+            <p style={{border:0, color:"white", background:"#e90349", margin:"0 auto"}}>
+            View / Download Portfolio PDF
+            </p>
+           
+            <iframe style={{border:"5px solid #e90349", width:"70vw", height:"50vw"}} src={pdf}/>
+
               <li className="sliderWrap">
 
                 <div className="slider">
+                
                   <ProjectTemplate
                     title={"Fitbit"}
                     image1={fitbit1}
@@ -192,6 +211,10 @@ function Work() {
                     image5={fitbit5}
                     image6={fitbit6}
                   />
+
+                  <video style={{width:"70vw"}} src={fbvid1} controls/>
+                  <video style={{width:"70vw"}} src={fbvid2} controls/>
+
                   <ProjectTemplate
                     title={"Meta"}
                     image1={fb1}
@@ -201,7 +224,11 @@ function Work() {
                     image5={fb5}
                     image6={fb6}
                   />
-                  <iframe width="90%" height="440" src="https://www.youtube.com/embed/Ksn6iPWUoIg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <video style={{width:"70vw"}} src={fb7} controls/>
+                  <video style={{width:"70vw"}} src={fb8} controls/>
+
+
+                  {/* <iframe width="90%" height="440" src="https://www.youtube.com/embed/Ksn6iPWUoIg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
 
                   <ProjectTemplate
                     title={"Electronic Arts"}
@@ -222,10 +249,11 @@ function Work() {
                     image5={ind5}
                     image6={ind6}
                   />
-                <iframe width="90%" height="440px" src="https://www.youtube.com/embed/pZodu9AgwZE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                <video width="90%" src={indeed1} controls/>
-                <video width="90%" src={indeed2} controls/>
-                <video width="90%" src={indeed3} controls/>
+                <video style={{width:"70vw"}} src={indvid} controls/>
+                <video style={{width:"70vw"}} src={indeed1} controls/>
+                <video style={{width:"70vw"}} src={indeed2} controls/>
+                <video style={{width:"70vw"}} src={indeed3} controls/>
+
                   <ProjectTemplate
                     title={"IHG"}
                     image1={ihg1}
@@ -235,7 +263,7 @@ function Work() {
                     image5={ihg5}
                     image6={ihg6}
                   />
-                <video width="94%" src={vidIhg1} controls/>
+                <video style={{width:"70vw"}}src={vidIhg1} controls/>
 
                   <ProjectTemplate
                     title={"Oracle"}
@@ -246,8 +274,15 @@ function Work() {
                     image5={or5}
                     image6={or6}
                   />
-                  <iframe width="90%" height="440px" src="https://www.youtube.com/embed/vC2XbiNsfBY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                  <iframe width="90%" height="440px" src="https://www.youtube.com/embed/cAcLhpuCmmA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+               
+                <video style={{width:"70vw"}} src={o4} controls/>
+                <video style={{width:"70vw"}} src={o5} controls/>
+                <video style={{width:"70vw"}} src={o1} controls/>
+                <video style={{width:"70vw"}} src={o2} controls/>
+                <video style={{width:"70vw"}} src={o3} controls/>
+              
+                
+               
 
 
                 </div>
