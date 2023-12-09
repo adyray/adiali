@@ -1,18 +1,23 @@
 import './_css/App.css';
-import React from 'react'
+import React, {useState} from 'react'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import main from "./main"
 import about from "./about"
 import work from "./projects"
 import elemental from "./_content/projects/elemental"
 import instax from "./instax"
-
+import Maintenance from "./maintenance"
 
 function App() {
-  
+
+  const [state, setState] = useState(true);
 
   return (
     <div className="App">
+      {
+      (state) ? 
+      <Maintenance define={e => setState(e)}/>
+      :
       <Router>
         <Switch>
           <Route path="/" exact component={main}></Route>
@@ -22,7 +27,7 @@ function App() {
           <Route path="*" component={elemental} ></Route>
         </Switch>
       </Router>
-
+}
     </div>
   );
 }
